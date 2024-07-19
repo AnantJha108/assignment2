@@ -20,6 +20,7 @@ class LoginAuth
             // Redirect to login page if user is not authenticated
             return redirect()->route('login');
         }
+
         return $next($request);
     }
 }
