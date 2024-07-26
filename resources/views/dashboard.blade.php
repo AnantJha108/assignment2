@@ -21,9 +21,9 @@
             </a>
             <ul class="navbar-nav">
                 @guest
-                <li class="nav-item"><a href="{{route("register")}}" class="btn btn-sm btn-primary ms-2">Signup</a>
+                <li class="nav-item"><a href="{{route(" register")}}" class="btn btn-sm btn-primary ms-2">Signup</a>
                 </li>
-                <li class="nav-item"><a href="{{route("login")}}" class="btn btn-sm btn-success ms-2">Login</a></li>
+                <li class="nav-item"><a href="{{route(" login")}}" class="btn btn-sm btn-success ms-2">Login</a></li>
                 @endguest
                 @auth
                 <a href="" class="nav-item nav-link text-white me-3">{{ Auth::user()->name }}`s Account</a>
@@ -36,9 +36,20 @@
 
     @section('content')
     @show
-    @auth
+    {{-- @auth
     <h1 class="h1 text-center mt-20">Helllo, <br>{{ Auth::user()->name }}</h1>
-    @endauth
+    @endauth --}}
+    <div class="container">
+        <div class="col-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="task" placeholder="Enter task">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
